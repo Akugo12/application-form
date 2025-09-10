@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Goma Vocational Training Centre Application Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #f8f9fa; }
+    .container { max-width: 900px; }
+    .form-section {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-radius: 10px;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .logo img { max-width: 120px; }
+    h2 { text-align: center; margin-bottom: 1rem; color: #004085; }
+    h4 { border-bottom: 2px solid #dee2e6; padding-bottom: 0.5rem; margin-bottom: 1rem; color: #333; }
+    button { background: #25D366; border: none; }
+    button:hover { background: #20b358; }
+    footer { text-align: center; margin-top: 2rem; padding: 1rem; color: #555; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <div class="logo text-center">
+      <img src="logo.png" alt="Goma College Logo">
+    </div>
+    <h2>Goma Vocational Training Centre Application Form</h2>
+    <p class="text-center text-muted">Fill all required details (*). Your application will be sent via WhatsApp.</p>
+
+    <form id="applicationForm">
+      <!-- Personal Information -->
+      <div class="form-section">
+        <h4>Personal Information</h4>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Full Name *</label>
+            <input type="text" class="form-control" id="fullName" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Date of Birth *</label>
+            <input type="date" class="form-control" id="dob" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Gender *</label>
+            <select class="form-select" id="gender" required>
+              <option value="">-- Select --</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Nationality *</label>
+            <input type="text" class="form-control" id="nationality" required>
+          </div>
+          <div class="col-md-12">
+            <label class="form-label">National ID / Passport *</label>
+            <input type="text" class="form-control" id="idNumber" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resident Information -->
+      <div class="form-section">
+        <h4>Resident Information</h4>
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label class="form-label">County *</label>
+            <input type="text" class="form-control" id="county" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Sub-County *</label>
+            <input type="text" class="form-control" id="subCounty" required>
+          </div>
+          <div class="col-md-4">
+            <label class="form-label">Ward / Village *</label>
+            <input type="text" class="form-control" id="ward" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Information -->
+      <div class="form-section">
+        <h4>Contact Information</h4>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Email *</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Phone Number *</label>
+            <input type="tel" class="form-control" id="phone" required>
+          </div>
+          <div class="col-md-12">
+            <label class="form-label">Postal / Physical Address *</label>
+            <input type="text" class="form-control" id="address" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Admission Information -->
+      <div class="form-section">
+        <h4>Admission Information</h4>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Intake *</label>
+            <input type="month" class="form-control" id="intake" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Mode of Study *</label>
+            <select class="form-select" id="mode" required>
+              <option value="">-- Select --</option>
+              <option>Full-time</option>
+              <option>Part-time</option>
+              <option>Online / Distance Learning</option>
+            </select>
+          </div>
+          <div class="col-md-12">
+            <label class="form-label">Preferred Course *</label>
+            <select class="form-select" id="course" required>
+              <option value="">-- Select Course --</option>
+              <optgroup label="Mechanical Department">
+                <option>General Fitting</option>
+                <option>Gas Welding</option>
+                <option>MIG and TIG Welding</option>
+                <option>High Pressure Welding</option>
+                <option>CNC Lathe and Milling Machining</option>
+                <option>Welding and Fabrication</option>
+                <option>Arc Welding</option>
+                <option>Turning/Machine (lathe, milling, shaping)</option>
+              </optgroup>
+              <optgroup label="ICT Department">
+                <option>MS Office Packages and Internet</option>
+                <option>Data Communication & Networks</option>
+                <option>Entrepreneurship and Soft Skills</option>
+                <option>MS Publisher & Adobe Pagemaker</option>
+                <option>Hardware Maintenance & Repair</option>
+                <option>Operating Systems</option>
+                <option>Industrial AutoCAD</option>
+                <option>Computer Programming</option>
+                <option>Web Development & Graphic Design</option>
+                <option>Accounting Packages</option>
+                <option>Microprocessor Technology</option>
+              </optgroup>
+              <optgroup label="Automotive Department">
+                <option>EFI Diagnostics</option>
+                <option>Engine Repair & Service</option>
+                <option>Motor Vehicle Electrical & Electronics</option>
+                <option>Motorcycle & Small Engines</option>
+                <option>On-board Vehicle Diagnostics</option>
+                <option>Panel Beating & Spray Painting</option>
+                <option>Vehicle Upholstery</option>
+              </optgroup>
+              <optgroup label="Electrical Department">
+                <option>Electrical Installation</option>
+                <option>Electrical Wireman</option>
+                <option>Solar Power Installation</option>
+                <option>Motor Control</option>
+                <option>Motor Rewinding</option>
+                <option>Power Generator Repair</option>
+                <option>Electronic Mechanics</option>
+              </optgroup>
+              <optgroup label="Hospitality & Fashion Design">
+                <option>Food & Beverage Production</option>
+                <option>Catering & Accommodation Management</option>
+                <option>Tour Guiding & Travel Operation</option>
+                <option>Hairdressing & Beauty Therapy</option>
+              </optgroup>
+              <optgroup label="Building & Construction">
+                <option>Tiling</option>
+                <option>Masonry</option>
+                <option>Carpentry & Joinery</option>
+                <option>Plumbing & Pipefitting</option>
+                <option>Painting & Decoration</option>
+                <option>Sign Writing</option>
+                <option>Cabinet Making</option>
+              </optgroup>
+              <optgroup label="Media Studies">
+                <option>Journalism</option>
+                <option>Mass Communication</option>
+                <option>Film Production & Animation</option>
+                <option>Strategic Public Relations</option>
+                <option>Video Editing & Production</option>
+                <option>Photography</option>
+              </optgroup>
+              <optgroup label="Business">
+                <option>Accounting</option>
+                <option>Supply Chain Management</option>
+                <option>Human Resource Management</option>
+                <option>Business Management</option>
+                <option>Sales & Marketing</option>
+                <option>Project Management</option>
+                <option>Economics</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Educational Background -->
+      <div class="form-section">
+        <h4>Educational Background</h4>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Last School *</label>
+            <input type="text" class="form-control" id="lastSchool" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Qualification *</label>
+            <input type="text" class="form-control" id="qualification" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Year Completed *</label>
+            <input type="number" class="form-control" id="yearCompleted" min="1900" max="2099" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Guardian Information -->
+      <div class="form-section">
+        <h4>Parent/Guardian Information</h4>
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Guardian Name *</label>
+            <input type="text" class="form-control" id="guardianName" required>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Guardian Contact *</label>
+            <input type="tel" class="form-control" id="guardianContact" required>
+          </div>
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div class="text-center">
+        <button type="submit" class="btn btn-success btn-lg">Submit via WhatsApp</button>
+      </div>
+    </form>
+
+    <footer>
+      <p>&copy; 2025 Goma Vocational Training Centre. All Rights Reserved.</p>
+      <p><small>Email: gomavocationalcentre@gmail.com | Tel: 0704 952 434 / 0796 834 440</small></p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("applicationForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const data = {
+        "Full Name": document.getElementById("fullName").value,
+        "Date of Birth": document.getElementById("dob").value,
+        "Gender": document.getElementById("gender").value,
+        "Nationality": document.getElementById("nationality").value,
+        "ID/Passport": document.getElementById("idNumber").value,
+        "County": document.getElementById("county").value,
+        "Sub-County": document.getElementById("subCounty").value,
+        "Ward/Village": document.getElementById("ward").value,
+        "Email": document.getElementById("email").value,
+        "Phone": document.getElementById("phone").value,
+        "Address": document.getElementById("address").value,
+        "Intake": document.getElementById("intake").value,
+        "Mode of Study": document.getElementById("mode").value,
+        "Preferred Course": document.getElementById("course").value,
+        "Last School": document.getElementById("lastSchool").value,
+        "Qualification": document.getElementById("qualification").value,
+        "Year Completed": document.getElementById("yearCompleted").value,
+        "Guardian Name": document.getElementById("guardianName").value,
+        "Guardian Contact": document.getElementById("guardianContact").value,
+      };
+
+      const whatsappNumber = "254704952434"; // WhatsApp number
+
+      let text = "*New Application - Goma College*%0A%0A";
+      for (const [label, value] of Object.entries(data)) {
+        text += `*${label}:* ${value}%0A`;
+      }
+
+      alert("✅ Thank you for applying! Redirecting you to WhatsApp...");
+      const url = `https://wa.me/${whatsappNumber}?text=${text}`;
+      window.open(url, "_blank");
+    });
+  </script>
+</body>
+</html>
